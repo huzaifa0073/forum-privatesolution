@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --glow-signal: 0 0 0 1px rgba(99,102,241,0.3), 0 0 16px rgba(99,102,241,0.15);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0c0e12;
+  color: #e8eaf0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Selection */
+::selection {
+  background: rgba(99,102,241,0.3);
+  color: #fff;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Forum layout */
+.forum-layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1120px) {
+  .forum-layout {
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+/* Avatar gradient colors */
+.avatar-gradient-1 { background-image: linear-gradient(135deg, hsl(78 68% 52%), hsl(78 68% 28%)); }
+.avatar-gradient-2 { background-image: linear-gradient(135deg, hsl(230 68% 52%), hsl(230 68% 28%)); }
+.avatar-gradient-3 { background-image: linear-gradient(135deg, hsl(22 68% 52%), hsl(22 68% 28%)); }
+.avatar-gradient-4 { background-image: linear-gradient(135deg, hsl(300 68% 52%), hsl(300 68% 28%)); }
+.avatar-gradient-5 { background-image: linear-gradient(135deg, hsl(180 68% 42%), hsl(180 68% 22%)); }
+
+/* Frosted glass for navbar */
+.glass {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}

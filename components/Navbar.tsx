@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/', label: 'Forums', external: false },
   { href: '/members', label: 'Members', external: false },
   { href: 'https://privatesolution.org/#products', label: 'Store', external: true },
+  { href: 'https://woofer.privatesolution.org', label: 'Woofer Guide', external: true },
   { href: '/category/support', label: 'Support', external: false },
 ]
 
